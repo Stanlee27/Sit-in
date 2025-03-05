@@ -1,0 +1,257 @@
+/* Styling for body background */
+body {
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body.no-bg {
+  background-image: none;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  --box-shadow: 10px 8px 8px 8px black;
+  opacity: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: transparent;
+}
+
+.btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.logo1 {
+  margin-left: 50px;
+  margin-right: 0px;
+  width: 100px;
+  height: 100px;
+}
+
+.logo2 {
+  width: 95px;
+  height: 85px;
+}
+
+.label {
+  text-indent: 39%;
+  font-family: 'Roboto' sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Spacing between elements */
+  align-items: center; /* Ensures vertical alignment of items */
+  background-color: lightblue;
+  padding: 10px 20px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Ensures a small gap between the buttons */
+}
+
+.navbar-right .btn {
+  height: 45px;
+  width: 45px; /* Set fixed width for consistent button size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific button size adjustments */
+.btn-prof, .btn-info, .btn-warning {
+  height: 45px;
+  width: 45px; /* Set all buttons to the same size */
+  background-color: lightblue;
+  border-radius: 50%;
+}
+
+.btn-warning {
+  background-color: lightblue;
+}
+
+.btn-prof {
+  background-color: lightgreen; /* Just an example, adjust as needed */
+}
+
+h1 {
+  font-size: 25px;
+  margin: 0 20px; /* Add some margin to the left and right for spacing */
+}
+
+body.dashboard {
+  background-color: white;
+  background-size: cover;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Main Content Styling */
+.main-content {
+  margin-left: 200px; /* Same as sidebar width */
+  padding: 20px;
+  background-color: #fff; /* White background for main content */
+  min-height: 100vh; /* Ensure it takes full height */
+}
+
+/* Rules Section Styling */
+.rules {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rules span {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.rules ol {
+  padding-left: 20px;
+}
+
+.rules ol li {
+  margin-bottom: 10px;
+}
+
+.rules ol ol {
+  padding-left: 40px;
+  margin-top: 5px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 700px) {
+  .navbar-left,
+  .navbar-right {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center align items */
+  }
+  .navbar-left img {
+    margin-bottom: 10px; /* Add some space between the logos */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar a {
+    float: left;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+/* Rules Container */
+.rules-container {
+  display: flex; /* Use flexbox for side-by-side layout */
+  gap: 20px; /* Space between the two boxes */
+  margin: 20px; /* Margin around the container */
+}
+
+/* Rules Box Styling */
+.rules-box {
+  background-color: #ffffff; /* White background */
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner spacing */
+  flex: 1; /* Equal width for both boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.rules-box span {
+  font-size: 1.5em; /* Larger font for the title */
+  font-weight: bold; /* Bold title */
+  color: #007bff; /* Blue color for the title */
+  display: block; /* Ensure it's on its own line */
+  margin-bottom: 15px; /* Space below the title */
+}
+
+.rules-box p {
+  font-size: 1.1em; /* Slightly larger font for the description */
+  color: #333; /* Dark gray color */
+  margin-bottom: 20px; /* Space below the description */
+}
+
+.rules-box ol {
+  padding-left: 20px; /* Indent the list */
+}
+
+.rules-box ol li {
+  margin-bottom: 10px; /* Space between list items */
+  font-size: 1em; /* Standard font size */
+  color: #555; /* Medium gray color */
+}
+
+.rules-box ol ol {
+  padding-left: 40px; /* Indent nested list */
+  margin-top: 5px; /* Space above nested list */
+}
+
+.rules-box ol ol li {
+  font-size: 0.9em; /* Slightly smaller font for nested list */
+  color: #777; /* Lighter gray color */
+}
